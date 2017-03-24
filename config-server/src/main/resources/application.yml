@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native: #Config Server会默认从应用的src/main/resource目录下检索配置文件。也可以通过以下配置指定检索位置
+          searchLocations: file:D:/projects/spring-cloud-demo/config-pro
+
+#spring:
+  #cloud:
+    #config:
+#      server:
+        #git:
+          #uri: https://git.oschina.net/gongxusheng/spring-config-demo.git
+          #searchPaths: my-sample-config
